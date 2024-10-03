@@ -6,7 +6,7 @@ silver_table_name = 'silver.online_retail_sales'
 
 con.execute(f"CREATE SCHEMA IF NOT EXISTS silver")
 
-con.execute(f"""
+result = con.execute(f"""
 CREATE OR REPLACE TABLE {silver_table_name} AS
 SELECT
 InvoiceNo,
