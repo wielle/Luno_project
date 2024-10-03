@@ -15,7 +15,8 @@ LOWER(Description) as Description,
 Cast(InvoiceDate as date) as InvoiceDate,
 Cast(InvoiceDate as time) as InvoiceTime,
 Quantity,
-Country                                                              
+Country,
+today() as DateCreated                                                                
 FROM {bronze_table_name}"""
 ).fetchdf()
 print("\nData in DuckDB:")
