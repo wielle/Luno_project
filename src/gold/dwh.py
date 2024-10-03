@@ -6,7 +6,6 @@ silver_table_name = 'silver.online_retail_sales'
 con.execute(f"CREATE SCHEMA gold")
 
 
-
 result = con.execute(f"""
 SELECT * FROM {silver_table_name}"""
 ).fetchdf()
